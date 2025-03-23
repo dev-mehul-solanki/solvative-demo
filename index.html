@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Search Places</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Search Places</h1>
+    <input type="text" id="search-box" placeholder="Search by city name" aria-label="Search places">
+    <span id="search-warning" class="warning-message" aria-live="assertive"></span>
+    <div id="spinner" class="spinner hidden"></div>
+  </header>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Place Name</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody id="results-body">
+        <tr><td colspan="3">Start searching</td></tr>
+      </tbody>
+    </table>
+
+    <div class="pagination-container">
+      <button id="prev-btn" disabled>&laquo; Prev</button>
+      <span id="page-info">Page 1</span>
+      <button id="next-btn">Next &raquo;</button>
+      <input type="number" id="limit-input" min="1" max="10" value="5" aria-label="Set number of results per page">
+      <span id="limit-warning" class="warning-message" aria-live="assertive"></span>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
